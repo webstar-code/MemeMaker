@@ -147,8 +147,6 @@ button {
 }
 
 textarea {
-  border: none;
-  background: none;
   height: 50px;
   font-weight: bold;
 }
@@ -233,10 +231,9 @@ textarea {
 }
 
 .Home-menu {
-  display: inline-block;
-  padding: 20px 20px 0px 20px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
-
 .footer {
   text-align: center;
   padding: 10% 0;

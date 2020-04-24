@@ -1,0 +1,32 @@
+.Home-container {
+    display: none;
+    position: absolute;
+    width: 90%;
+    background-color: crimson;
+    border-radius: 3px;
+    // height: 500px;
+    z-index: 1;
+}
+
+.close {
+    display: inline-block;
+    margin-left: 97%;
+}
+
+.intro {
+    margin-left: 25%;
+    padding-right: 100px;
+
+    h1 {
+        letter-spacing: 2px;
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 48px;
+        letter-spacing: 1px;
+    }
+}
+.home-footer {
+    margin: 10% 25%;
+}

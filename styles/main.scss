@@ -7,8 +7,18 @@
 .root {
     position: relative;
 }
-
+@import './home';
 @import './btns';
 @import './editContainer';
 @import './images';
+
+.Home-menu {
+    display: inline-block;
+    padding: 20px 20px 0px 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10% 0;
+}
 
