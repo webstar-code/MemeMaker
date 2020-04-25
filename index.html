@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="/node_modules/html2canvas/dist/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="/node_modules/jquery-ui-dist/jquery-ui.min.css"> -->
+     <!-- <script src="/node_modules/html2canvas/dist/html2canvas.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="/node_modules/jquery-ui-dist/jquery-ui.min.css"> -->
+    <!-- <script src="/node_modules/html2canvas/dist/html2canvas.js"></script> -->
+     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <!-- <link rel="stylesheet" href="/assests/css/styles.css"> -->
     <link rel="stylesheet" href="/styles/main.css">
@@ -13,7 +15,9 @@
 </head>
 
 <body>
-    <div class="root">
+   
+    <section class="root">
+       
         <div class="Home-menu"><img src="/assests/images/menu.svg" style="width: 20px; height: 20px;"></div>
         <div class="Home-container">
             <div class="close">X</div>
@@ -23,12 +27,16 @@
             </div>
             <div class="home-footer">developed by webstar</div>
         </div>
-
+        <!-- <canvas id="canvas" width="200" height="200"></canvas> -->
         <div class="Edit-container">
-            <div class="container"><img src="" id="container-img"></div>
+          
+            <div class="container">
+                <img src="" id="container-img">
+            </div>
             <div class="btn-container">
                 <button class="addTextbtn" id="addtext">Add Text</button>
-                <a href="#" id="downloadbtn"><button class="downloadbtn">Save</button></a>
+
+                <a id="downloadbtn"><button class="downloadbtn">Save</button></a>
             </div>
             <div class="btn-container">
                 Change Color:
@@ -38,6 +46,7 @@
 
             </div>
         </div>
+        <div class="preview-img"></div>
         <hr>
         <div class="Image-container">
             <h1>Select a Image</h1>
@@ -51,13 +60,12 @@
         </div>
 
         <div class="footer">No more images...</div>
-    </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assests/js/jquery-ui-touch-punch-amd/jquery.ui.touch-punch.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-
     <!-- <script src="/node_modules/jquery/dist/jquery.min.js"></script> -->
     <!-- <script src="/node_modules/jquery-ui-dist/jquery-ui.min.js"></script> -->
     <!-- <script src="/node_modules/jquery-ui-touch-punch-amd/jquery.ui.touch-punch.js"></script> -->

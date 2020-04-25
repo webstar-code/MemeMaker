@@ -1,4 +1,9 @@
 
+// import html2canvas from "html2canvas";
+
+// import { backgroundImage } from "html2canvas/dist/types/css/property-descriptors/background-image";
+
+
 let contH;
 let contW;
 let Imgname;
@@ -82,6 +87,9 @@ getMeme().then((memes) => {
 function handleimg(imgs, name) {
     const containerImg = document.getElementById('container-img');
     containerImg.src = imgs.src;
+    // $(".container").css(backgroundImage, 'url(imgs.url)');
+    $(".container").css("background-image","url("+imgs.src+")");
+    // $(".box").css("background-image", "url(" + imageUrl + ")");
     Imgname = name;
     contH = $(".container").height();
     contW = $(".container").width();
@@ -102,38 +110,54 @@ $(".redbtn").click(() => {
 // ===================== Download the image ===================================
 
 
-// let element = $(".container");
-// let ImageData;
-// $("#downloadbtn").on('click', function () {
-//     let getCanvas;
-//     console.log("he;;p");
-//     html2canvas(element, {
-//         onrendered: function (canvas) {
-//             // $("#preview-img").append(canvas);
-//         console.log(element);
-
-//             getCanvas = canvas;
-//             ImageData = getCanvas.toDataURL("image/jpeg");
-//             let newData = ImageData.replace(/^data:image\/jpeg/, "data:application/octet-stream");
-//             $("#downloadbtn").attr("download", "upur.jpeg").attr("href", newData);
-//         }
-//     });
-// });
-
-
-
 let element = $(".container");
 let ImageData;
-$("#downloadbtn").on('click', function() {
-let getCanvas;
-
-    html2canvas(element,{
-        // allowTaint: true, //Worked without this!
+$("#downloadbtn").on('click', function () {
+    let getCanvas;
+    console.log("he;;p");
+    html2canvas(element, {
+        background: '#FFFFFF',
+        // allowTaint: true,
         useCORS: true,
-        onrendered: function(canvas) {
-            $("#downloadbtn").attr("download","pic.jpeg").attr("href",canvas.toDataURL('image/jpeg'));
+        onrendered: function (canvas) {
+            // $("#preview-img").append(canvas);
+        console.log(element);
+
+            getCanvas = canvas;
+            ImageData = getCanvas.toDataURL("image/jpeg");
+            let newData = ImageData.replace(/^data:image\/jpeg/, "data:application/octet-stream");
+            $("#downloadbtn").attr("download", "upur.jpeg").attr("href", newData);
         }
     });
+});
+
+
+
+// let element = $(".container");
+// let ImageData;
+// $("#downloadbtn").on('click', function() {
+// let getCanvas;
+
+    
+   
+    // html2canvas(element,{
+    //     // allowTaint: true, //Worked without this!
+    //     useCORS: true,
+    //     onrendered: function(canvas) {
+    //         getCanvas = canvas;
+    //         console.log(canvas);
+            
+    //  $(".preview-img").append(getCanvas);
+    // $("#downloadbtn").attr("download","pic.png").attr("href",getCanvas.toDataURL('image/png'));
+            
+    //         // console.log(canvas.toDataURL('image/png'));
+    //     }
+
+    // });
+    // console.log(getCanvas);
+
+
+
 
         // useCORS: true,
 //         onrendered: function(canvas) {
@@ -148,7 +172,7 @@ let getCanvas;
     // let ImageData = getCanvas.toDataURL("image/png");
     // console.log(ImageData);
    
-})
+// })
 
 
 // ==================== Display Home page ==========================
@@ -170,3 +194,28 @@ $(".close").click(() => {
 
 });
 
+
+// // ================ CAnvas =========================
+    // const canvas = document.getElementById('canvas');
+    // let ctx = canvas.getContext('2d');
+    
+    // const img = document.getElementById('container-img');
+    
+    //     console.log(img);
+    // ctx.drawImage(img,0,0);    
+     
+     
+
+    //  $("#downloadbtn").on('click',function() {
+    // const canvas = document.getElementById('canvas');
+
+    //     let newimg = new Image();
+    //     newimg.crossOrigin='Anonymous';
+    //     newimg.src = canvas.toDataURL('image/png');
+    //      $("#downloadbtn").attr("download","med.png").attr("href",canvas.toDataURL('image/png'));
+    //     //  $("#downloadbtn").attr("download","pic.png").attr("href",canvas.toDataURL('image/png'));
+    //     document.body.append(newimg);
+    //     document.body.append(canvas.toDataURL('image/png'));
+
+    // });
+    
