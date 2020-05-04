@@ -21,7 +21,8 @@
 
 .close {
   display: inline-block;
-  margin-left: 97%;
+  padding: 5px;
+  margin-left: 90%;
 }
 
 .intro {
@@ -54,6 +55,8 @@ button {
 
 .addTextbtn {
   padding: 10px 50px;
+  background-color: #e01f3d;
+  border: none;
 }
 
 .colorbtn {
@@ -106,8 +109,7 @@ button {
 }
 
 .Edit-container {
-  width: 90%;
-  margin: auto;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,15 +123,28 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 5% auto;
+  margin-right: 20px;
 }
 
 .container {
-  width: 50%;
+  width: 60%;
   height: auto;
-  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border: 1px solid black;
   position: relative;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #container-img {
@@ -139,16 +154,28 @@ button {
      object-fit: cover;
 }
 
+.black-box {
+  display: none;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
 .dragdiv {
   position: absolute;
   top: 40px;
   left: 50px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 textarea {
+  border: none;
+  background: none;
   height: 50px;
   font-weight: bold;
+  text-align: center;
+  min-height: 50px;
 }
 
 .dragdiv {
@@ -223,17 +250,111 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .column {
-    -webkit-box-flex: 100%;
-        -ms-flex: 100%;
-            flex: 100%;
-    max-width: 100%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+  }
+  .column img {
+    margin: 10px auto;
   }
 }
 
-.Home-menu {
-  padding: 10px 20px;
-  cursor: pointer;
+.Edit-tools {
+  background-color: #282828;
+  color: #464646;
+  width: 30%;
 }
+
+.Edit-tools div {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-bottom: 0.5px solid white;
+}
+
+.edit-title {
+  font-size: 12px;
+}
+
+.change-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.change-font {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.templates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Home-menu {
+  display: inline-block;
+  padding: 20px 20px 0px 20px;
+}
+
 .footer {
   text-align: center;
   padding: 10% 0;

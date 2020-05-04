@@ -11,6 +11,15 @@
 @import './btns';
 @import './editContainer';
 @import './images';
+@import './EditTools';
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
 
 .Home-menu {
     display: inline-block;

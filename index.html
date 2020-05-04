@@ -1,76 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-164587227-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- <script src="/node_modules/html2canvas/dist/html2canvas.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="/node_modules/jquery-ui-dist/jquery-ui.min.css"> -->
-    <!-- <script src="/node_modules/html2canvas/dist/html2canvas.js"></script> -->
-     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+      gtag("config", "UA-164587227-1");
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+    />
     <!-- <link rel="stylesheet" href="/assests/css/styles.css"> -->
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/assests/css/styles/main.css" />
     <title>MemeMaker</title>
-</head>
+  </head>
 
-<body>
-   
+  <body>
     <section class="root">
-       
-        <div class="Home-menu"><img src="/assests/images/menu.svg" style="width: 20px; height: 20px;"></div>
-        <div class="Home-container">
-            <div class="close">X</div>
-            <div class="intro">
-                <h1>MemeMaker</h1>
-                <p>Instantly makes memes and download it.</p>
-            </div>
-            <div class="home-footer">developed by webstar</div>
+      <div class="Home-menu">
+        <img
+          src="/assests/images/menu.svg"
+          style="width: 20px; height: 20px;"
+        />
+      </div>
+      <div class="Home-container">
+        <div class="close">X</div>
+        <div class="intro">
+          <h1>MemeMaker</h1>
+          <p>Instantly makes memes and download it.</p>
         </div>
-        <!-- <canvas id="canvas" width="200" height="200"></canvas> -->
+        <div class="home-footer">developed by webstar</div>
+      </div>
+      <div class="wrapper">
         <div class="Edit-container">
-          
-            <div class="container">
-                <img src="" id="container-img">
+          <div class="container">
+            <div class="black-box Top"></div>
+            <img src="" id="container-img" />
+            <div class="black-box Bottom"></div>
+             
+          </div>
+          <div class="btn-container">
+            <button class="addTextbtn" id="addtext">Add Text</button>
+            <a id="downloadbtn"><button class="downloadbtn">Save</button></a>
+          </div>
+          <!-- <div class="btn-container">
+            Change Color:
+            <button class="blackbtn colorbtn">black</button>
+            <button class="whitebtn colorbtn">White</button>
+            <button class="redbtn colorbtn">Red</button>
+          </div> -->
+        </div>
+        <div class="Edit-tools">
+            <div class="edit-title">Edit tools</div>
+            <div class="change-color">
+                <span>Color: </span>
+                <button class="white color-btn ">White</button>
+                <button class="color-btn black">Black</button>
+                <button class="color-btn red">Red</button>
             </div>
-            <div class="btn-container">
-                <button class="addTextbtn" id="addtext">Add Text</button>
-
-                <a id="downloadbtn"><button class="downloadbtn">Save</button></a>
+            <div class="change-font">
+                <span>Font: </span>
+                <button class="font-btn white-text">TEXT1</button>
+                <button class="font-btn black-text">TEXT2</button>
             </div>
-            <div class="btn-container">
-                Change Color:
-                <button class="blackbtn colorbtn">black</button>
-                <button class="whitebtn colorbtn">White</button>
-                <button class="redbtn colorbtn">Red</button>
+            <div class="template">
+                <span>Templates:</span>
+                <div class="templates">
+                  <span class="none"><img src="/assests/images/none.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="TopBottomBlack"><img src="/assests/images/TopBottom.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="TopBottomWhite"><img src="/assests/images/white.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="TopWhiteExtra"><img src="/assests/images/TopExtra.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="BottomBlack"><img src="/assests/images/BottomBlack.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="BottomWhite"><img src="/assests/images/BottomWhite.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="TopBlack"><img src="/assests/images/Top.svg" style="width: 50px; height: 50px;"></span>
+                  <span class="TopWhite"><img src="/assests/images/TopWhite.svg" style="width: 50px; height: 50px;"></span>
+                  
+                </div>
 
+            </div>
+            <div class="control">
+                <button class="control-btn reset">Reset</button>
+                <button class="control-btn done">Done</button>
             </div>
         </div>
-        <div class="preview-img"></div>
-        <hr>
-        <div class="Image-container">
-            <h1>Select a Image</h1>
-            <div class="row">
-                <div class="column1 column"></div>
-                <div class="column2 column"></div>
-                <div class="column3 column"></div>
-                <div class="column4 column"></div>
-            </div>
-
+      </div>
+      <hr />
+      <div class="Image-container">
+        <h1>Select a Image</h1>
+        <div class="row">
+          <div class="column1 column"></div>
+          <div class="column2 column"></div>
+          <div class="column3 column"></div>
+          <div class="column4 column"></div>
         </div>
+      </div>
 
-        <div class="footer">No more images...</div>
+      <div class="footer">No more images...</div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assests/js/jquery-ui-touch-punch-amd/jquery.ui.touch-punch.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <!-- <script src="/node_modules/jquery/dist/jquery.min.js"></script> -->
-    <!-- <script src="/node_modules/jquery-ui-dist/jquery-ui.min.js"></script> -->
-    <!-- <script src="/node_modules/jquery-ui-touch-punch-amd/jquery.ui.touch-punch.js"></script> -->
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.fittext.js"></script>
     <script src="/assests/js/index.js"></script>
-</body>
-
+    <script src="/assests/js/Edit_Tools.js"></script>
+  </body>
 </html>

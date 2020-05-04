@@ -1,0 +1,39 @@
+.Edit-tools {
+    background-color: #282828;
+    color: #464646;
+    width:30%;
+    div {
+        padding: 5px;
+        margin-bottom: 10px;
+        border-bottom: 0.5px solid white;
+    }
+}
+.edit-title {
+    font-size: 12px;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.change-color {
+    @include flex;
+}
+.change-font {
+    @include flex;
+}
+.template {
+    @include flex;
+}
+.control {
+    @include flex;
+}
+
+.templates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
