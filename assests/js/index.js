@@ -105,6 +105,7 @@ $("#downloadbtn").on('click', function () {
     let getCanvas;
     html2canvas(element, {
         background: '#FFFFFF',
+        scale: 5,
         // allowTaint: true,
         useCORS: true,
         onrendered: function (canvas) {
@@ -119,7 +120,7 @@ $("#downloadbtn").on('click', function () {
 
 
 // ==================== Display Home page ==========================
-$(".Home-menu").click(() => {
+$(".brand").click(() => {
     // $(".Home-container").show();
     $("img").css({'opacity': '0.5'});
     // $(".Home-menu").hide();

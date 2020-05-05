@@ -1,15 +1,54 @@
 .Edit-tools {
     background-color: #282828;
-    color: #464646;
+    color: #ffffff;
+    text-emphasis: 60%;
     width:30%;
+    border-radius: 10px;
+    padding: 10px;
     div {
-        padding: 5px;
-        margin-bottom: 10px;
-        border-bottom: 0.5px solid white;
+        padding: 10px 0px;
+        // margin-bottom: 10px;
+        // margin: 0;
+        border-bottom: 0.5px solid rgba(245, 243, 243, 0.233);
+    }
+
+    button {
+        border: none;
+        background-color: #ffffff8f;
+        margin: 0;
+        width: 20%;
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        width: 90%;
+        button {
+            font-size: 16px;
+
+        }
+
     }
 }
 .edit-title {
+    display: flex;
+    justify-content: space-between;
     font-size: 12px;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    div {
+        padding: 0px !important;
+    }
+
+}
+
+
+.tools {
+    border: none !important;
+    padding: 0 !important;
 }
 
 @mixin flex {
@@ -23,17 +62,57 @@
 }
 .change-font {
     @include flex;
+    .none-text {
+        font-size: 12px;
+        font-weight: bolder;
+
+    }
+    .white-text {
+        font-size: 12px;
+        font-weight: bolder;
+        color: white;
+        -webkit-text-stroke: 1px black;
+    }
+    .black-text {
+        font-size: 12px;
+        font-weight: bolder;
+        color: black;
+        -webkit-text-stroke: 1px white;
+    }
+
+
 }
 .template {
-    @include flex;
+  display: flex;
+  flex-direction: column;
 }
 .control {
     @include flex;
+    border: none !important;
 }
 
 .templates {
+    width: 90%;
+    margin-left: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 0 5%;
+    border: none !important;
+    cursor: pointer;
+    span {
+        padding: 5px 0px;
+        
+        @media screen and (max-width: 600px){
+            padding: 5px;
+        }
+    }
+}
+
+
+.reset {
+    display: flex;
+    align-items: center;
+    width: 25% !important;
 }

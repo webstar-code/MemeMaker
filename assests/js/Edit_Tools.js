@@ -1,3 +1,19 @@
+// ============ Tools Hide in Mmobile
+// $(".show-tools").click(() => {
+//     $(".tools").animate({
+//         height: "toggle"
+//     })
+// })
+
+$(".edit-title").click(() => {
+    $(".tools").animate({
+        height: "toggle"
+    })
+})
+
+
+
+
 // ============== Change Color
 $(".white").click(() => {
     $("textarea").css({ color: 'white'});
@@ -11,6 +27,10 @@ $(".red").click(() => {
     $("textarea").css({ color: 'red'});
 })
 // ============= Change Font
+$(".none-text").click(() => {
+    $("textarea").css({ webkitTextStroke: '0px' });
+})
+
 $(".white-text").click(() => {
     $("textarea").css({color: 'white',webkitTextStroke: '0.5px black'})
 })
@@ -32,15 +52,14 @@ $(".none").click(() => {
 })
 
 $(".TopBottomBlack").click(() => {
-    $(".black-box").css({ display: 'block', backgroundColor: 'black'});
+    $(".black-box").css({ display: 'block', backgroundColor: 'black', height: '50px'});
 })
 
 $(".TopBottomWhite").click(() => {
-    $(".black-box").css({ display: 'block', backgroundColor: 'white'});
+    $(".black-box").css({ display: 'block', backgroundColor: 'white', height: '50px'});
 })
 
 $(".BottomBlack").click(() => {
-    alert("Hello");
     $(".Top").css({ display: "none" });
     $(".Bottom").css({ display: "block", backgroundColor: 'black' });
 })
@@ -51,13 +70,13 @@ $(".BottomWhite").click(() => {
 })
 
 $(".TopWhite").click(() => {
-    $(".Top").css({ display: "block", backgroundColor: 'white' });
+    $(".Top").css({ display: "block", backgroundColor: 'white', height: '50px' });
     $(".Bottom").css({ display: "none"});
 })
 
 
 $(".TopBlack").click(() => {
-    $(".Top").css({ display: "block", backgroundColor: 'black' });
+    $(".Top").css({ display: "block", backgroundColor: 'black', height: '50px' });
     $(".Bottom").css({ display: "none"});
 })
 
